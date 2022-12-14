@@ -1,7 +1,7 @@
 # Ignore
-
-#nvim
+.gitignore
 # Files 
+!nvim
 !wal
 !../
 !qtile
