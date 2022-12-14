@@ -3,6 +3,7 @@
 # Files 
 
 !.config/
+!.config/btop
 !.zshrc
 !.zprofile
 !.gitignore
