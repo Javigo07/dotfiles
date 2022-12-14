@@ -18,7 +18,6 @@ auto_fullscreen = True
 auto_minimize = False
 focus_on_window_activation = "urgent"
 
-
 # XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
 # string besides java UI toolkits; you can see several discussions on the
 # mailing lists, GitHub issues, and other WM documentation that suggest setting

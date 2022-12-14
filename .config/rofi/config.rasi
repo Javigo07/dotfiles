@@ -1,7 +1,7 @@
 @import "config-wal"
 configuration {
 show-icons: true;
-font: "iosevka 14";
+font: "iosevka 13";
 }
 
 
