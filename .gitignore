@@ -1,10 +1,12 @@
 # Ignore
 *
+
 # Files 
 
 !.config/
 !.config/btop
 !.zshrc
 !.zprofile
-!.gitignore
+.gitignore
+.config/**/.gitignore
 !.xinitrc
