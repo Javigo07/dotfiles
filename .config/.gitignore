@@ -2,7 +2,7 @@
 
 #nvim
 # Files 
-
+!wal
 !../
 !qtile
 !kitty
