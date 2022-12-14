@@ -1,0 +1,9 @@
+# Ignore
+*
+# Files 
+
+!.config/
+!.zshrc
+!.zprofile
+!.gitignore
+!.xinitrc

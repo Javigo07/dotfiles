@@ -1,0 +1,1 @@
+/home/javigo07/.zprezto/runcoms/zprofile
