@@ -1,0 +1,10 @@
+# Ignore
+#*
+#nvim
+# Files 
+
+!qtile
+!kitty
+!wal
+!wired
+!rofi
