@@ -8,7 +8,13 @@ import subprocess
 @hook.subscribe.startup_once
 def startup(): 
     subprocess.Popen(['.config/qtile/autostart.sh'])
- 
+
+@hook.subscribe.setgroup
+def setgroup():
+  for i in range(0,8):
+    qtile.groups[i].label = "○"
+  qtile.current_group.label = "◉" 
+
 dgroups_key_binder = None
 dgroups_app_rules = [] # type: List 
 follow_mouse_focus = True

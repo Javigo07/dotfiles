@@ -2,7 +2,7 @@ from libqtile.config import Key
 from libqtile.lazy import lazy
 
 from .settings import mod, terminal
-from .traverse import *
+from .traverse import left,right
 mod = "mod4"
 
 @lazy.function
@@ -49,16 +49,16 @@ keys = [
 
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
-    Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
+    Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
 
     Key([mod, "control"], "r", lazy.reload_config(), desc="Restart Qtile"),
     Key(["mod1"], "p", lazy.spawn("flameshot gui"), desc="Restart Qtile"),
     Key([mod, "control"], "apostrophe", lazy.shutdown(), desc="Shutdown Qtile"),
-    Key([mod], "r", lazy.spawncmd(),
-        desc="Spawn a command using a prompt widget"),
+    #Key([mod], "r", lazy.spawncmd(),
+     #   desc="Spawn a command using a prompt widget"),
     Key([mod], "space", lazy.spawn("rofi -show drun"),
         desc="Show rofi -show drun uwur window"),
     Key([mod], "t", lazy.window.toggle_fullscreen(),
         desc="Fullscreen"),
+    Key([], "XF86AudioPlay", lazy.spawn("playerctl play-pause"))
 ]
-

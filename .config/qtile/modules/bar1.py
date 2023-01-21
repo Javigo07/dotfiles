@@ -81,6 +81,9 @@ screen1=Screen(
                   widget.Spacer(bar.STRETCH),
                   GroupBox(),
                  widget.Spacer(bar.STRETCH),
+                widget.Systray(
+                  background='#000000',
+                  ),
                 modify(
                     Expanding.ExpandingClock,
                     **decor,

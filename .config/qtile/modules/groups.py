@@ -6,6 +6,7 @@ from .settings import mod
 from .custom.colors import colors
 
 layouts = [
+    #layout.MonadTall(margin=[0,0,20,20], border=colors[1]),
     layout.Columns(margin = [0,0,20,20], num_columns=2, border=colors[1], border_focus_stack=colors[5], margin_on_single=[6, 8, 6, 8]),
     layout.Max(margin = 8),
 ]
@@ -27,20 +28,28 @@ floating_layout = layout.Floating(float_rules=[
 ])
 
 
-group_names = [("一",""), ("二",""), ("三",""),
+group_names = [("",""), ("二","max"), ("三",""),
         ("四",""), ("五",""), ("六",""),
-        ("七",""), ("八",""), ("九", "max")]
+        ("七",""), ("八", "max")]
+teclas = ["w","l","r"]
+
 
 def match(name):
     if name == group_names[1][0]:
         return [Match(wm_class='Telegram')]
-    elif name == group_names[2][1]:
-        return [Match(wm_class='ferdium')]
+    elif name == group_names[1][0]:
+        return [Match(wm_class='Ferdium')]
+    elif name == group_names[4][0]:
+        return [Match(wm_class='qbittorrent')]
     return [] 
 
 groups = [Group(name, layout=layout, matches=match(name)) for name, layout in group_names]
 
 for i, name in enumerate(group_names):
+#  if (i+1) <= 5:
     keys.append(Key([mod], str(i+1), lazy.group[name[0]].toscreen(toggle=True)))
     keys.append(Key([mod, "shift"], str(i+1), lazy.window.togroup(name[0])))
+ # else:
+  #  keys.append(Key([mod], str(teclas[i-5]), lazy.group[name[0]].toscreen(toggle=True))) 
+   # keys.append(Key([mod, "shift"], str(teclas[i-5]), lazy.window.togroup(name[0])))
     
